@@ -1,24 +1,100 @@
-@font-face {
-    font-family: 'Sparkling Valentine';
-    src: url('sparkling_valentine/Sparkling Valentine.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     touch-action: manipulation;
-    font-family: 'Sparkling Valentine', cursive;
 }
 
 body {
-    font-family: 'Sparkling Valentine', cursive;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
     background: transparent;
+}
+
+/* Cookie banner */
+.cookie-banner {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 2000;
+    display: none;
+}
+
+.cookie-banner.is-visible {
+    display: block;
+}
+
+.cookie-banner__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(245, 240, 235, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 14px;
+    padding: 1rem 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.cookie-banner__text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: rgba(47, 54, 47, 0.95);
+    max-width: 70ch;
+}
+
+.cookie-banner__actions {
+    display: flex;
+    gap: 0.75rem;
+    flex: 0 0 auto;
+}
+
+.cookie-btn {
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.cookie-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+.cookie-btn--primary {
+    background: #2f362f;
+    color: #fff;
+    border-color: transparent;
+}
+
+.cookie-btn--secondary {
+    background: rgba(255, 255, 255, 0.55);
+    color: rgba(47, 54, 47, 0.95);
+}
+
+@media (max-width: 600px) {
+    .cookie-banner__inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cookie-banner__actions {
+        width: 100%;
+    }
+
+    .cookie-btn {
+        width: 100%;
+    }
 }
 
 /* Header Styles */
@@ -28,20 +104,19 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 0;
+    padding: 1rem 2rem;
     background: transparent;
 }
 
 .header-container {
     background-color: #f5f0eb;
-    border-radius: 0;
+    border-radius: 12px;
     padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: none;
-    margin: 0;
+    max-width: 1400px;
+    margin: 0 auto;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: relative;
 }
@@ -61,18 +136,23 @@ body {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 0.25rem 0.5rem;
-    background-color: #e8ede8 !important;
+    background-color: #f5f0eb !important;
     width: fit-content;
     min-width: 120px;
-    position: relative;
 }
 
 .icons-container,
 .header-left-icons .icons-container {
-    background-color: #e8ede8 !important;
+    background-color: #f5f0eb !important;
 }
 
-
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    letter-spacing: 0.05em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
 
 .icon-button {
     background: none;
@@ -96,17 +176,9 @@ body {
     color: #4a4a4a;
 }
 
-.profile-button {
-    border-radius: 50%;
-    
-    
-}
-
-
-
-.profile-button svg {
-    width: 22px;
-    height: 22px;
+.icon-button:hover {
+    opacity: 0.7;
+    background-color: rgba(74, 74, 74, 0.08);
 }
 
 .icon-button svg {
@@ -115,27 +187,9 @@ body {
 }
 
 #menuBtn {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    min-height: 48px;
-    border-radius: 50%;
-    border: 1.5px solid #d8d2cb;
-    background-color: #e8ede8;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    z-index: 1001;
-}
-
-#menuBtn:hover {
-    transform: scale(1.05);
-    border-color: #c0b5a8;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-#menuBtn svg {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #D9D3C6;
+    border-radius: 8px;
+    background-color: #f5f0eb;
 }
 
 #menuBtn .close-icon {
@@ -148,18 +202,6 @@ body {
 
 #menuBtn.active .close-icon {
     display: block;
-    animation: fadeInScale 0.4s ease forwards;
-}
-
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.8) rotate(-45deg);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) rotate(0deg);
-    }
 }
 
 /* Main Content */
@@ -199,16 +241,11 @@ body {
     overflow: hidden;
     width: 100%;
     height: 100vh;
-    height: 100svh;
-    touch-action: none;
-    overscroll-behavior: contain;
-    -webkit-user-select: none;
-    user-select: none;
 }
 
 .left-slide {
     height: 100%;
-    width: 50%;
+    width: 35%;
     position: absolute;
     top: 0;
     left: 0;
@@ -225,24 +262,17 @@ body {
     color: #fff;
 }
 
-.right-slide,
-.right-slide > div {
-    touch-action: none;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
 .left-slide h1 {
     font-size: 40px;
     margin-bottom: 10px;
     margin-top: -30px;
-    font-family: 'Sparkling Valentine', cursive;
-    font-weight: 700;
+    font-family: 'Playfair Display', 'Cormorant Garamond', 'EB Garamond', 'Georgia', serif;
+    font-weight: 500;
 }
 
 .left-slide p {
     font-size: 18px;
-    font-family: 'Sparkling Valentine', cursive;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 300;
 }
 
@@ -250,8 +280,8 @@ body {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 35%;
+    width: 65%;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -285,79 +315,26 @@ body {
 
 .slider-container .action-buttons button {
     position: absolute;
+    left: 35%;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 100;
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    border: 2px solid rgba(255, 255, 255, 0.9);
-    width: 48px;
-    height: 48px;
-    padding: 0 !important;
-    border-radius: 999px;
-    color: #ffffff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
 
 .slider-container .action-buttons .down-button {
-    left: 1.5rem;
-    border-radius: 999px;
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .slider-container .action-buttons .up-button {
-    right: 1.5rem;
-    border-radius: 999px;
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .action-buttons button svg {
     width: 20px;
     height: 20px;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.7));
-}
-
-.slider-container .action-buttons button svg {
-    width: 22px;
-    height: 22px;
-}
-
-.shop-now-btn {
-    position: absolute;
-    left: 50%;
-    bottom: 5rem;
-    transform: translateX(-50%);
-    z-index: 100;
-    color: #4a4a4a;
-    text-decoration: none;
-    font-size: 1.4rem;
-    padding: 0.45rem 1.1rem;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-
-
-.slider-dots {
-    position: absolute;
-    left: 50%;
-    bottom: 1.5rem;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.6rem;
-    z-index: 100;
-}
-
-.slider-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.slider-dot.active {
-    background-color: #ffffff;
-    transform: scale(1.2);
 }
 
 /* Responsive Slider */
@@ -374,17 +351,12 @@ body {
     .left-slide p {
         font-size: 15px;
     }
-
-    .ecom-footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 @media (max-width: 480px) {
     .slider-container {
         width: 100vw;
         height: 100vh;
-        height: 100svh;
     }
 
     .left-slide h1 {
@@ -400,19 +372,207 @@ body {
     .action-buttons button {
         padding: 12px;
     }
-
-    .ecom-footer {
-        padding: 2.2rem 1rem 1.25rem;
-    }
-
-    .ecom-footer-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
 }
 
 .section-2 {
-    background-color: #F8FAF9;
+    background-color: #f5f0eb;
+    padding: 8rem 2rem 4rem;
+    overflow-y: auto;
+}
+
+/* Products Section Styles */
+.products-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1400px;
+}
+
+.products-title {
+    font-family: 'Playfair Display', 'Cormorant Garamond', 'EB Garamond', 'Georgia', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    color: #2F362F;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 0.02em;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+
+.product {
+    border: 1px solid #D9D3C6;
+    background: #ffffff;
+    height: 300px;
+    padding: 10px 10px 20px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(47, 54, 47, 0.15);
+}
+
+.product-img {
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 7px;
+    position: relative;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+    color: #4a4a4a;
+}
+
+.wishlist-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    color: #788978;
+}
+
+.wishlist-btn.active {
+    color: #788978;
+}
+
+.wishlist-btn.active svg {
+    fill: #788978;
+}
+
+.wishlist-btn svg {
+    transition: all 0.3s ease-in-out;
+}
+
+.product-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(70%);
+    border-radius: 7px;
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.product:hover .product-img img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.product-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #2F362F;
+    margin: 0;
+}
+
+.product-info p {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    color: #788978;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.add-to-cart-btn {
+    display: inline-block;
+    width: auto;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid #788978;
+    background: #788978;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.add-to-cart-btn:hover {
+    background: #2F362F;
+    color: #ffffff;
+    border-color: #2F362F;
+}
+
+/* Responsive Products */
+@media (max-width: 768px) {
+    .products-container {
+        width: 95%;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .product {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-2 {
+        padding: 8rem 1rem 2rem;
+    }
+
+    .products-container {
+        width: 100%;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    .product {
+        height: 260px;
+        padding: 8px 8px 15px 8px;
+    }
+
+    .product-info h3 {
+        font-size: 0.9rem;
+    }
+
+    .product-info p {
+        font-size: 0.85rem;
+    }
+
+    .add-to-cart-btn {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
+    }
 }
 
 .section-3 {
@@ -420,54 +580,11 @@ body {
 }
 
 .section-4 {
-    background-color: #788978;
-}
-
-.ecom-footer {
-    background-color: #f5f0eb;
-    border-top: 1px solid #ddd6cd;
-    padding: 3rem 2rem 1.5rem;
-}
-
-.ecom-footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
-
-.ecom-footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
-    gap: 2rem;
-}
-
-.ecom-footer-column h3 {
-    font-size: 0.9rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #2f2f2f;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.ecom-footer-column a {
-    display: block;
-    text-decoration: none;
-    color: #555;
-    margin-bottom: 0.7rem;
-    font-size: 0.95rem;
-}
-
-.ecom-footer-column a:hover {
-    color: #1f1f1f;
-}
-
-.ecom-footer-bottom {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #ddd6cd;
-    color: #6a6a6a;
-    font-size: 0.85rem;
+    background-color: #e6e8d8;
+    min-height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4.5rem 2rem 2.5rem;
 }
 
 .content-wrapper {
@@ -475,8 +592,211 @@ body {
     max-width: 900px;
 }
 
+/* Site Footer (Zara-like standard footer) */
+.site-footer {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 2.2rem;
+    padding-bottom: 2.2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4a4a4a;
+    letter-spacing: 0.03em;
+}
+
+.footer-tagline {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: rgba(74, 74, 74, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 34ch;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-top: 0.2rem;
+}
+
+.footer-social-link {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    width: fit-content;
+}
+
+.footer-social-link:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-col-title {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    color: rgba(47, 54, 47, 0.95);
+}
+
+.footer-nav-link {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+    color: rgba(74, 74, 74, 0.9);
+    text-decoration: none;
+    width: fit-content;
+    opacity: 0.92;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.footer-nav-link:hover {
+    opacity: 1;
+    color: rgba(47, 54, 47, 1);
+}
+
+.footer-newsletter-text {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(74, 74, 74, 0.9);
+}
+
+.footer-form {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 0.35rem;
+}
+
+.footer-email {
+    flex: 1 1 auto;
+    min-width: 180px;
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.55);
+    outline: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+}
+
+.footer-email:focus {
+    border-color: rgba(47, 54, 47, 0.35);
+    box-shadow: 0 0 0 4px rgba(47, 54, 47, 0.08);
+}
+
+.footer-subscribe-btn {
+    flex: 0 0 auto;
+    padding: 0.85rem 1.1rem;
+    border: 0;
+    border-radius: 10px;
+    background: #2f362f;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.footer-subscribe-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+}
+
+.footer-form-note {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: rgba(74, 74, 74, 0.75);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1.6rem;
+}
+
+.footer-copyright {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+    color: rgba(74, 74, 74, 0.9);
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+/* Responsive footer */
+@media (max-width: 900px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-4 {
+        padding: 3.5rem 1rem 2rem;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .footer-email {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .footer-subscribe-btn {
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+}
+
 .main-title {
-    font-family: 'Sparkling Valentine', cursive;
+    font-family: 'Georgia', 'Times New Roman', serif;
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 400;
     line-height: 1.1;
@@ -499,7 +819,7 @@ body {
 }
 
 .subtitle {
-    font-family: 'Sparkling Valentine', cursive;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: #ffffff;
     font-weight: 300;
@@ -605,7 +925,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        padding: 0;
+        padding: 0.75rem 1rem;
     }
 
     .header-container {
@@ -666,13 +986,13 @@ body {
 .menu-container {
     position: absolute;
     top: 100%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-width: none;
-    margin: 0;
+    left: 2rem;
+    right: 2rem;
+    width: calc(100% - 4rem);
+    max-width: 1400px;
+    margin: 0 auto;
     background-color: #f5f0eb;
-    border-radius: 0;
+    border-radius: 0 0 12px 12px;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -702,7 +1022,7 @@ body {
     font-weight: 600;
     color: #4a4a4a;
     letter-spacing: 0.05em;
-    font-family: 'Sparkling Valentine', cursive;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .menu-content {
@@ -756,7 +1076,7 @@ body {
 }
 
 .nav-link {
-    font-family: 'Sparkling Valentine', cursive;
+    font-family: 'Playfair Display', 'Cormorant Garamond', 'EB Garamond', 'Georgia', serif;
     font-size: 2.5rem;
     font-weight: 400;
     color: #4a4a4a;
@@ -822,13 +1142,6 @@ body {
     text-align: right;
 }
 
-.social-title {
-    font-size: 0.95rem;
-    color: #4a4a4a;
-    margin: 0 0 0.2rem 0;
-    font-weight: 500;
-}
-
 .legal-links {
     display: flex;
     flex-direction: column;
@@ -841,19 +1154,12 @@ body {
 }
 
 .footer-link {
-    font-family: 'Sparkling Valentine', cursive;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 0.9rem;
     color: #6a6a6a;
     text-decoration: none;
     transition: color 0.2s ease, opacity 0.4s ease;
     opacity: 0;
-}
-
-.social-icon-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
 }
 
 .menu-container.active .footer-link {
@@ -896,227 +1202,17 @@ body {
     color: #4a4a4a;
 }
 
-.cookie-banner {
-    position: fixed;
-    left: 50%;
-    bottom: 1rem;
-    transform: translateX(-50%);
-    width: min(92vw, 760px);
-    background: #ffffff;
-    border: 1px solid #ddd6cd;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
-    padding: 0.95rem 1rem;
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    z-index: 3000;
-}
-
-.cookie-banner.show {
-    display: flex;
-}
-
-.cookie-banner p {
-    color: #3f3f3f;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0;
-}
-
-.cookie-actions {
-    display: flex;
-    gap: 0.6rem;
-    flex-shrink: 0;
-}
-
-.cookie-btn {
-    border: 1px solid #d2ccc3;
-    background: #f7f4f0;
-    color: #2d2d2d;
-    border-radius: 999px;
-    padding: 0.45rem 1rem;
-    font-size: 0.9rem;
-    cursor: pointer;
-}
-
-.cookie-btn.accept {
-    background: #2f362f;
-    border-color: #2f362f;
-    color: #fff;
-}
-
-/* Readable typography + stronger responsive behavior */
-* {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
-
-.main-title,
-.subtitle,
-.menu-logo,
-.nav-link,
-.footer-link,
-.left-slide h1,
-.left-slide p {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
-
-@media (max-width: 768px) {
-    .header {
-        padding: 0;
-    }
-
-    .header-container {
-        padding: 0.65rem 0.85rem;
-    }
-
-    #menuBtn {
-        width: 42px;
-        height: 42px;
-        min-width: 42px;
-        min-height: 42px;
-    }
-
-    .icons-container {
-        min-width: auto;
-        gap: 0.3rem;
-        padding: 0.2rem 0.35rem;
-    }
-
-    .icon-button {
-        width: 32px;
-        height: 32px;
-        min-width: 32px;
-        min-height: 32px;
-        padding: 0.35rem;
-    }
-
-    .nav-link {
-        font-size: 1.75rem;
-    }
-
-    .slider-container .action-buttons button {
-        width: 42px;
-        height: 42px;
-    }
-
-    .shop-now-btn {
-        font-size: 1rem;
-        bottom: 4.4rem;
-        padding: 0.4rem 0.95rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-container {
-        border-radius: 10px;
-    }
-
-    .section.section-1 {
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-
-    .slider-container {
-        margin-top: 0;
-        height: 100svh;
-        height: 100vh;
-    }
-
-    .logo {
-        font-size: 1.1rem;
-    }
-
-    .nav-link {
-        font-size: 1.4rem;
-    }
-
-    .menu-content {
-        padding: 1rem;
-    }
-
-    .menu-main-section {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 1.5rem;
-        align-items: flex-start;
-        margin-bottom: 1.5rem;
-    }
-
-    .right-side-links {
-        width: auto;
-        margin-left: auto;
-        padding-left: 3rem;
-        border-left: 1px solid rgba(0, 0, 0, 0.1);
-        align-items: flex-end;
-        text-align: right;
-        gap: 2rem;
-    }
-
-    .social-links,
-    .legal-links {
-        align-items: flex-end;
-        text-align: right;
-        width: auto;
-    }
-
-    .legal-links {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
-
-    .slider-container .action-buttons .down-button {
-        left: 0.8rem;
-    }
-
-    .slider-container .action-buttons .up-button {
-        right: 0.8rem;
-    }
-
-    .shop-now-btn {
-        bottom: calc(6rem + env(safe-area-inset-bottom));
-        font-size: 0.95rem;
-    }
-
-    .slider-dots {
-        bottom: calc(2.2rem + env(safe-area-inset-bottom));
-    }
-
-    .cookie-banner {
-        left: 0.75rem;
-        right: 0.75rem;
-        bottom: 0.75rem;
-        transform: none;
-        width: auto;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .cookie-actions {
-        width: 100%;
-    }
-
-    .cookie-btn {
-        flex: 1;
-    }
-}
-
 /* Menu Responsive Design */
 @media (max-width: 768px) {
     .header {
-        padding: 0;
+        padding: 0.75rem 1rem;
     }
 
     .menu-container {
-        left: 0;
-        right: 0;
-        width: 100%;
-        max-width: none;
+        left: 1rem;
+        right: 1rem;
+        width: calc(100% - 2rem);
+        max-width: 100%;
     }
 
     .menu-container.active {
@@ -1164,14 +1260,14 @@ body {
 
 @media (max-width: 480px) {
     .header {
-        padding: 0;
+        padding: 0.75rem;
     }
 
     .menu-container {
-        left: 0;
-        right: 0;
-        width: 100%;
-        max-width: none;
+        left: 0.75rem;
+        right: 0.75rem;
+        width: calc(100% - 1.5rem);
+        max-width: 100%;
     }
 
     .menu-container.active {
@@ -1191,59 +1287,12 @@ body {
     }
 
     .menu-main-section {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 2rem;
-        align-items: flex-start;
+        gap: 1.5rem;
     }
 
     .right-side-links {
-        width: auto;
-        margin-left: auto;
-        padding-left: 2rem;
-        border-left: 1px solid rgba(0, 0, 0, 0.12);
         align-items: flex-end;
         text-align: right;
     }
-
-    .social-links,
-    .legal-links {
-        align-items: flex-end;
-        text-align: right;
-        width: auto;
-    }
-
-    .legal-links {
-        margin-top: 1.25rem;
-        padding-top: 1.25rem;
-    }
-
-    .social-links {
-        gap: 0.6rem;
-    }
 }
 
-/* Final phone overrides (keep slider visible without header whitespace) */
-@media (max-width: 480px) {
-    .header {
-        padding: 0;
-    }
-
-    .header-container {
-        padding: 0.45rem 0.6rem;
-    }
-
-    .slider-container {
-        margin-top: 0;
-        height: 100svh;
-        height: 100vh;
-    }
-
-    .shop-now-btn {
-        bottom: calc(5.2rem + env(safe-area-inset-bottom));
-    }
-
-    .slider-dots {
-        bottom: calc(1.8rem + env(safe-area-inset-bottom));
-    }
-}

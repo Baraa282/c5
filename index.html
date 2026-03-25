@@ -1,110 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAI - Approachable Intelligence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header class="header">
         <div class="header-container">
-            <button class="icon-button" id="menuBtn" aria-label="Menu">
-                <svg class="menu-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 6H20M4 12H14M4 18H9" stroke="#000000" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-                <svg class="close-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </button>
-            <h1 class="logo"></h1>
             <div class="header-left-icons">
                 <div class="icons-container">
-                    <a class="icon-button profile-button" id="profileBtn" aria-label="Profile" href="profile.html">
+                    <button class="icon-button" id="profileBtn" aria-label="Profile">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
                         </svg>
-                    </a>
+                    </button>
                     <button class="icon-button" id="wishlistBtn" aria-label="Wishlist">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
                     <button class="icon-button" id="cartBtn" aria-label="Cart">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" />
-                            <path d="M16 10a4 4 0 0 1-8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 10a4 4 0 0 1-8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
                 </div>
             </div>
+            <h1 class="logo"></h1>
+            <button class="icon-button" id="menuBtn" aria-label="Menu">
+                <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
         </div>
         <!-- Menu Container -->
-        <div class="menu-container" id="menuOverlay">
+        <div class="menu-container" id="menuOverlay" style="background-color: #e6e8d8;">
             <div class="menu-content">
                 <div class="menu-main-section">
                     <nav class="main-nav">
-                        <a href="#" class="nav-link">Home</a>
-                        <a href="#" class="nav-link">Products</a>
-                        <a href="#" class="nav-link">Contact us</a>
-                        <a href="#" class="nav-link">Careers</a>
+                        <a href="index.html#" class="nav-link">Home</a>
+                        <a href="index.html#products" class="nav-link">Products</a>
+                        <a href="index.html#" class="nav-link">Contact us</a>
+                        <a href="index.html#" class="nav-link">Careers</a>
                     </nav>
 
                     <div class="right-side-links">
                         <div class="social-links">
-                            <p class="social-title">Follow me</p>
-                            <a href="#" class="footer-link social-icon-link" aria-label="TikTok">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.4 4.2c.9 1.3 2.1 2.2 3.6 2.5v2.4c-1.3-.1-2.5-.6-3.6-1.4v5.7a4.8 4.8 0 1 1-4.8-4.8c.3 0 .7 0 1 .1v2.5a2.4 2.4 0 1 0 1.4 2.2V2.1h2.4v2.1Z"
-                                        fill="#25F4EE" />
-                                    <path d="M15.2 3.6c.9 1.3 2.1 2.2 3.6 2.5v2.4c-1.3-.1-2.5-.6-3.6-1.4v5.7a4.8 4.8 0 1 1-4.8-4.8c.3 0 .7 0 1 .1v2.5a2.4 2.4 0 1 0 1.4 2.2V1.5h2.4v2.1Z"
-                                        fill="#FE2C55" />
-                                    <path d="M14.8 3.9c.9 1.3 2.1 2.2 3.6 2.5v2.4c-1.3-.1-2.5-.6-3.6-1.4v5.7A4.8 4.8 0 1 1 10 8.3c.3 0 .7 0 1 .1v2.5a2.4 2.4 0 1 0 1.4 2.2V1.8h2.4v2.1Z"
-                                        fill="#111111" />
-                                </svg>
-                            </a>
-                            <a href="#" class="footer-link social-icon-link" aria-label="Instagram">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="igGradient" x1="3" y1="21" x2="21" y2="3" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#FEDA75" />
-                                            <stop offset="0.35" stop-color="#FA7E1E" />
-                                            <stop offset="0.6" stop-color="#D62976" />
-                                            <stop offset="0.8" stop-color="#962FBF" />
-                                            <stop offset="1" stop-color="#4F5BD5" />
-                                        </linearGradient>
-                                    </defs>
-                                    <rect x="3" y="3" width="18" height="18" rx="5" fill="url(#igGradient)" />
-                                    <circle cx="12" cy="12" r="4" stroke="#ffffff" stroke-width="2" />
-                                    <circle cx="17.5" cy="6.5" r="1.2" fill="#ffffff" />
-                                </svg>
-                            </a>
+                            <a href="index.html#" class="footer-link">LinkedIn</a>
+                            <a href="index.html#" class="footer-link">Instagram</a>
+                            <a href="index.html#" class="footer-link">X</a>
                         </div>
                         <div class="legal-links">
-                            <a href="#" class="footer-link">Rights</a>
-                            <a href="#" class="footer-link">Privacy & Cookies</a>
-                            <a href="#" class="footer-link">Terms</a>
+                            <a href="index.html#" class="footer-link">Rights</a>
+                            <a href="index.html#" class="footer-link">Privacy & Cookies</a>
+                            <a href="index.html#" class="footer-link">Terms</a>
                         </div>
                     </div>
                 </div>
@@ -115,73 +77,252 @@
     <main class="main-content">
         <section class="section section-1">
             <div class="slider-container">
+                <div class="left-slide">
+                    <div style="background-color: #1a1a1a">
+                        <h1>Classic Elegance</h1>
+                        <p>Timeless sophistication</p>
+                    </div>
+                    <div style="background-color: #2c2416">
+                        <h1>Golden Heritage</h1>
+                        <p>Luxury redefined</p>
+                    </div>
+                    <div style="background-color: #1e2a35">
+                        <h1>Modern Precision</h1>
+                        <p>Engineering excellence</p>
+                    </div>
+                    <div style="background-color: #2d1f1f">
+                        <h1>Vintage Charm</h1>
+                        <p>Classic refinement</p>
+                    </div>
+                </div>
                 <div class="right-slide">
-                    <div
-                        style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?fit=crop&w=1600&q=80');">
-                    </div>
-                    <div
-                        style="background-image: url('https://images.unsplash.com/photo-1470770903676-69b98201ea1c?fit=crop&w=1600&q=80');">
-                    </div>
-                    <div
-                        style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80');">
-                    </div>
+                    <div style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1399&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div style="background-image: url('https://images.unsplash.com/photo-1524592094714-0f0654e20314?q=80&w=1393&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div style="background-image: url('https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div style="background-image: url('https://images.unsplash.com/photo-1551816230-ef5deaed4a26?q=80&w=1412&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
                 </div>
                 <div class="action-buttons">
-                    <button class="down-button" aria-label="Previous slide">
+                    <button class="down-button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M19 9l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                    <button class="up-button" aria-label="Next slide">
+                    <button class="up-button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                            <path d="M5 15l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                </div>
-                <a href="#" class="shop-now-btn">Shop now</a>
-                <div class="slider-dots" aria-label="Slide indicators">
-                    <span class="slider-dot active" data-slide="0"></span>
-                    <span class="slider-dot" data-slide="1"></span>
-                    <span class="slider-dot" data-slide="2"></span>
                 </div>
             </div>
         </section>
-        <section class="section section-2"></section>
-        <section class="section section-3"></section>
-        <section class="section section-4"></section>
-    </main>
-    <footer class="ecom-footer">
-        <div class="ecom-footer-container">
-            <div class="ecom-footer-grid">
-                <div class="ecom-footer-column">
-                    <h3>Help</h3>
-                    <a href="#">Track order</a>
-                    <a href="#">Shipping</a>
-                    <a href="#">Returns</a>
-                    <a href="#">Contact us</a>
-                </div>
-                <div class="ecom-footer-column">
-                    <h3>Legal</h3>
-                    <a href="#">Privacy policy</a>
-                    <a href="#">Terms and conditions</a>
-                    <a href="#">Cookies settings</a>
-                    <a href="#">Accessibility</a>
+        <section id="products" class="section section-2">
+            <div class="products-container">
+                <h2 class="products-title">Products</h2>
+                <div class="product-list">
+                    <div class="product" data-price="50">
+                        <div class="product-img">
+                            <button class="wishlist-btn" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <img src="https://images.pexels.com/photos/277319/pexels-photo-277319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Helux Nautica">
+                        </div>
+                        <div class="product-info">
+                            <h3>Helux Nautica</h3>
+                            <p>$50</p>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="150">
+                        <div class="product-img">
+                            <button class="wishlist-btn" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <img src="https://images.pexels.com/photos/404181/pexels-photo-404181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Exquisit Atros">
+                        </div>
+                        <div class="product-info">
+                            <h3>Exquisit Atros</h3>
+                            <p>$150</p>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="250">
+                        <div class="product-img">
+                            <button class="wishlist-btn" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <img src="https://images.pexels.com/photos/3766111/pexels-photo-3766111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Helux Spielberg">
+                        </div>
+                        <div class="product-info">
+                            <h3>Helux Spielberg</h3>
+                            <p>$250</p>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="350">
+                        <div class="product-img">
+                            <button class="wishlist-btn" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <img src="https://images.pexels.com/photos/9897926/pexels-photo-9897926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Luminare Marine">
+                        </div>
+                        <div class="product-info">
+                            <h3>Luminare Marine</h3>
+                            <p>$350</p>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="450">
+                        <div class="product-img">
+                            <button class="wishlist-btn" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <img src="https://images.pexels.com/photos/9897857/pexels-photo-9897857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Regalli Claustroph">
+                        </div>
+                        <div class="product-info">
+                            <h3>Regalli Claustroph</h3>
+                            <p>$450</p>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="550">
+                        <div class="product-img">
+                            <button class="wishlist-btn" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <img src="https://images.pexels.com/photos/10436602/pexels-photo-10436602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Luminare Luxus">
+                        </div>
+                        <div class="product-info">
+                            <h3>Luminare Luxus</h3>
+                            <p>$550</p>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="650">
+                        <div class="product-img">
+                            <button class="wishlist-btn" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <img src="https://images.pexels.com/photos/10478973/pexels-photo-10478973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Regalli Hetchers">
+                        </div>
+                        <div class="product-info">
+                            <h3>Regalli Hetchers</h3>
+                            <p>$650</p>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="750">
+                        <div class="product-img">
+                            <button class="wishlist-btn" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <img src="https://images.pexels.com/photos/10414981/pexels-photo-10414981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Helux MVII">
+                        </div>
+                        <div class="product-info">
+                            <h3>Helux MVII</h3>
+                            <p>$750</p>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="850">
+                        <div class="product-img">
+                            <button class="wishlist-btn" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <img src="https://images.pexels.com/photos/10443775/pexels-photo-10443775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Exquisit Remos">
+                        </div>
+                        <div class="product-info">
+                            <h3>Exquisit Remos</h3>
+                            <p>$850</p>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    <div class="product" data-price="950">
+                        <div class="product-img">
+                            <button class="wishlist-btn" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <img src="https://images.pexels.com/photos/9423283/pexels-photo-9423283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Helux Hostenhof">
+                        </div>
+                        <div class="product-info">
+                            <h3>Helux Hostenhof</h3>
+                            <p>$950</p>
+                        </div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
                 </div>
             </div>
-            <p class="ecom-footer-bottom">© 2026 Tala. All rights reserved.</p>
-        </div>
-    </footer>
-    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
-        <p>We use cookies to improve your experience. You can accept or reject optional cookies.</p>
-        <div class="cookie-actions">
-            <button type="button" class="cookie-btn reject" id="rejectCookiesBtn">Reject</button>
-            <button type="button" class="cookie-btn accept" id="acceptCookiesBtn">Accept</button>
+        </section>
+        <section class="section section-3"></section>
+        <section class="section section-4">
+            <footer class="site-footer">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <div class="footer-logo">Ornate Vacherin</div>
+                        <p class="footer-tagline">Premium essentials, crafted with timeless elegance.</p>
+                        <div class="footer-social">
+                            <a class="footer-social-link" href="index.html#">LinkedIn</a>
+                            <a class="footer-social-link" href="index.html#">Instagram</a>
+                            <a class="footer-social-link" href="index.html#">X</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col footer-col--newsletter">
+                        <h4 class="footer-col-title">Newsletter</h4>
+                        <p class="footer-newsletter-text">Subscribe for new drops and exclusive offers.</p>
+                        <form class="footer-form" action="#" method="post">
+                            <input class="footer-email" type="email" name="email" placeholder="Email address" required>
+                            <button class="footer-subscribe-btn" type="submit">Subscribe</button>
+                        </form>
+                        <p class="footer-form-note">By subscribing, you agree to receive emails. Unsubscribe anytime.</p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-copyright">© 2026 Ornate Vacherin. All rights reserved.</div>
+                    <div class="footer-bottom-links">
+                        <a class="footer-nav-link footer-bottom-link" href="index.html#">Privacy</a>
+                        <a class="footer-nav-link footer-bottom-link" href="index.html#">Cookies</a>
+                        <a class="footer-nav-link footer-bottom-link" href="index.html#">Terms</a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+        <div class="cookie-banner__inner">
+            <p class="cookie-banner__text">
+                We use cookies to improve your experience and analyze site traffic. You can accept or reject non-essential cookies.
+            </p>
+            <div class="cookie-banner__actions">
+                <button class="cookie-btn cookie-btn--secondary" id="cookieRejectBtn" type="button">Reject</button>
+                <button class="cookie-btn cookie-btn--primary" id="cookieAcceptBtn" type="button">Accept</button>
+            </div>
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
+
