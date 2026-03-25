@@ -1005,6 +1005,17 @@ body {
         border-radius: 10px;
     }
 
+    .section.section-1 {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .slider-container {
+        margin-top: 88px;
+        height: calc(100svh - 88px);
+        height: calc(100vh - 88px);
+    }
+
     .logo {
         font-size: 1.1rem;
     }
@@ -1018,30 +1029,32 @@ body {
     }
 
     .menu-main-section {
-        flex-direction: column;
-        gap: 1.25rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        align-items: flex-start;
     }
 
     .right-side-links {
-        width: 100%;
-        margin-left: 0;
-        padding-left: 0;
-        border-left: none;
-        align-items: flex-start;
-        text-align: left;
-        gap: 1.2rem;
+        width: auto;
+        margin-left: auto;
+        padding-left: 3rem;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        align-items: flex-end;
+        text-align: right;
+        gap: 2rem;
     }
 
     .social-links,
     .legal-links {
-        align-items: flex-start;
-        text-align: left;
-        width: 100%;
+        align-items: flex-end;
+        text-align: right;
+        width: auto;
     }
 
     .legal-links {
-        margin-top: 0.8rem;
-        padding-top: 0.8rem;
+        margin-top: 2rem;
+        padding-top: 2rem;
     }
 
     .slider-container .action-buttons .down-button {
@@ -1165,29 +1178,30 @@ body {
     }
 
     .menu-main-section {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
         align-items: flex-start;
-        gap: 1.5rem;
     }
 
     .right-side-links {
-        width: 100%;
-        margin-left: 0;
-        padding-left: 0;
-        border-left: none;
-        align-items: flex-start;
-        text-align: left;
+        width: auto;
+        margin-left: auto;
+        padding-left: 3rem;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        align-items: flex-end;
+        text-align: right;
     }
 
     .social-links,
     .legal-links {
-        align-items: flex-start;
-        text-align: left;
-        width: 100%;
+        align-items: flex-end;
+        text-align: right;
+        width: auto;
     }
 
     .legal-links {
-        margin-top: 1rem;
-        padding-top: 1rem;
+        margin-top: 2rem;
+        padding-top: 2rem;
     }
 }
