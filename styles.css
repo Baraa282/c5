@@ -1011,9 +1011,9 @@ body {
     }
 
     .slider-container {
-        margin-top: 88px;
-        height: calc(100svh - 88px);
-        height: calc(100vh - 88px);
+        margin-top: 0;
+        height: 100svh;
+        height: 100vh;
     }
 
     .logo {
@@ -1222,9 +1222,9 @@ body {
     }
 
     .slider-container {
-        margin-top: 72px;
-        height: calc(100svh - 72px);
-        height: calc(100vh - 72px);
+        margin-top: 0;
+        height: 100svh;
+        height: 100vh;
     }
 
     .shop-now-btn {
